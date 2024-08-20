@@ -19,6 +19,9 @@ Cálculo Dinámico del Total: Actualiza automáticamente el total del carrito a 
 Tecnologías Utilizadas
 
 HTML: Estructura de las páginas web.
+
 CSS: Estilos y diseño.
+
 JavaScript: Funcionalidad, incluyendo agregar/eliminar artículos del carrito, actualizar totales y manejar el proceso de pago.
+
 JSON: Utilizado para almacenar y gestionar la lista de productos, permitiendo una fácil integración y actualización de los datos.
