@@ -2,6 +2,7 @@
 Projecto para el Curso de Javascript - Coderhouse
 
 Carrito de Compras y Página de Pago
+
 Este proyecto es un sistema de carrito de compras y página de pago basado en la web, construido utilizando HTML, CSS, JavaScript  y la librería JSON. Permite a los usuarios navegar por los productos, agregarlos a un carrito, ver el contenido del carrito y proceder al pago.
 
 Funcionalidades
