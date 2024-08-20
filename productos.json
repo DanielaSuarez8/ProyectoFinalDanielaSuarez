@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Haku y Chihiro La Danza del Dragón Eterno",
+    "precio": 250,
+    "imagen": "imgs/hakuyChihiroLaDanzadelDragónEterno.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "El Vuelo de la Hechicera y el Mago",
+    "precio": 170,
+    "imagen": "imgs/elVuelodelaHechicerayelMago.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Totoro y el Gatobús Aventura Bajo la Luna",
+    "precio": 200,
+    "imagen": "imgs/totoroyelGatobúsAventuraBajolaLuna.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "El Abrazo del Océano",
+    "precio": 350,
+    "imagen": "imgs/elAbrazodelOcéano.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "El Refugio de Totoro Un Mundo en el Bosque",
+    "precio": 150,
+    "imagen": "imgs/elRefugiodeTotoroUnMundoenelBosque.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "La Aventura Voladora de Totoro",
+    "precio": 100,
+    "imagen": "imgs/laAventuraVoladoradeTotoro.jpg"
+  }
+] 
