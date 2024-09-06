@@ -50,7 +50,7 @@ function addDataToHTML(){
 let listaCarrito = [];
 
 function checkCarrito(){
-  var cookieValue = document.cookie
+  let cookieValue = document.cookie
   .split('; ')
   .find(row => row.startsWith('listaCarrito='));
   if(cookieValue){
@@ -81,37 +81,42 @@ addCarritoToHTML();
 }
 addCarritoToHTML();
 
-function addCarritoToHTML(){
-  //limpiando datos
+function addCarritoToHTML() {
+  // Limpiando datos
   let listaCarritoHTML = document.querySelector('.listaCarrito');
   listaCarritoHTML.innerHTML = '';
   let totalHTML = document.querySelector('.cantidadTotal');
   let cantidadTotal = 0;
 
-  if(listaCarrito){
-    listaCarrito.forEach(producto => {
-      if(producto){
-        let nuevoCarrito = document.createElement('div');
-        nuevoCarrito.classList.add('item');
-        nuevoCarrito.innerHTML =
-      `<img src="${producto.imagen}">
-        <div class="contenido">
-          <div class="nombre">
-            ${producto.nombre}
-          </div>
-          <div class="precio">
-            ${producto.precio}
-          </div>
-        </div>
-        <div class="cantidad">
-          <button onclick="cambiarCantidad(${producto.id}, '-')">-</button>
-          <span class="value">${producto.cantidad}</span>
-          <button onclick="cambiarCantidad(${producto.id}, '+')">+</button>
-        </div>`
+  // Si el carrito está vacío, muestra un mensaje adecuado
+  if (!listaCarrito || listaCarrito.length === 0 || Object.keys(listaCarrito).length === 0) {
+    listaCarritoHTML.innerHTML = '<p>Tu carrito está vacío.</p>';
+  } else {
+    if (listaCarrito) {
+      listaCarrito.forEach(producto => {
+        if (producto) {
+          let nuevoCarrito = document.createElement('div');
+          nuevoCarrito.classList.add('item');
+          nuevoCarrito.innerHTML = 
+          `<img src="${producto.imagen}">
+            <div class="contenido">
+              <div class="nombre">
+                ${producto.nombre}
+              </div>
+              <div class="precio">
+                ${producto.precio}
+              </div>
+            </div>
+            <div class="cantidad">
+              <button onclick="cambiarCantidad(${producto.id}, '-')">-</button>
+              <span class="value">${producto.cantidad}</span>
+              <button onclick="cambiarCantidad(${producto.id}, '+')">+</button>
+            </div>`;
           listaCarritoHTML.appendChild(nuevoCarrito);
-          cantidadTotal = cantidadTotal + producto.cantidad;
-      }
-    })
+          cantidadTotal += producto.cantidad;
+        }
+      });
+    }
   }
   totalHTML.innerText = cantidadTotal;
 }

@@ -183,11 +183,27 @@ header .cantidadTotal{
 
 /*Pagina de Checkout*/
 
-.checkoutLayout{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+}
+
+.checkoutLayout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.returnCart,
+.derecha {
+  flex: 1;
+  padding: 20px;
+}
+
+.lista .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .checkoutLayout .derecha{
@@ -237,16 +253,6 @@ header .cantidadTotal{
   font-size: x-large;
 }
 
-.buttonCheckout{
-  width: 100%;
-  height: 40px;
-  border: none;
-  border-radius: 20px;
-  margin-top: 20px;
-  font-weight: bold;
-  color: #14323E;
-  background-color: #FE796D;
-}
 
 .returnCart h1{
   border-top: 1px solid #f2f2f2;
@@ -274,4 +280,55 @@ header .cantidadTotal{
 .returnCart .item .returnPrice{
   font-size: x-large;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .checkoutLayout {
+    flex-direction: column;
+  }
+}
+
+.grupo {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttonCheckout {
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #14323E;
+  background-color: #FE796D;
+}
+
+.buttonCheckout:hover {
+  background-color: #f75a4c;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #14323E;
+}
+
+a.continueShopping {
+  color: #FE796D;
+  text-decoration: none;
+}
+
+a.continueShopping:hover {
+  text-decoration: underline;
 }
