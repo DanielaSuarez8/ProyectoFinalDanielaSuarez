@@ -128,7 +128,7 @@ function cambiarCantidad($idProducto, $type){
       break;
     case '-':
       listaCarrito[$idProducto].cantidad--;
-      // si la cantidad es <= 0 entonces remueve el producto del carrito
+
       if(listaCarrito[$idProducto].cantidad <= 0){
         delete listaCarrito[$idProducto];
       }

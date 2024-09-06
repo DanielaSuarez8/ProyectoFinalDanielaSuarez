@@ -38,8 +38,6 @@ let listaCarrito = [];
               <div class="cantidad">${producto.cantidad}</div>
               <div class="returnPrice">$${producto.precio * producto.cantidad}</div>`;
             listaCarritoHTML.appendChild(nuevoP);
-
-            // Sumar cantidad y precio
             cantidadTotal += producto.cantidad;
             precioTotal += producto.precio * producto.cantidad;
           }
@@ -75,14 +73,11 @@ let listaCarrito = [];
           icon: 'success',
           confirmButtonText: 'OK'
         }).then(() => {
-          // Borrar la cookie del carrito
+          // borrar la cookie del carrito
           document.cookie = "listaCarrito=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    
-          // Limpiar el carrito en la interfaz de usuario
-          addCarritoToHTML(); // Actualizar el HTML después de eliminar el carrito
-    
-          // Redirigir a la página de inicio después de que el usuario presione "OK"
-          window.location.href = 'index.html'; // Redirige a index.html
+          // limpiar el carrito en la interfaz de usuario
+          addCarritoToHTML(); //
+          window.location.href = 'index.html';
         });
       })
       .catch(error => {

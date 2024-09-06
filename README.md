@@ -22,6 +22,6 @@ HTML: Estructura de las páginas web.
 
 CSS: Estilos y diseño.
 
-JavaScript: Funcionalidad, incluyendo agregar/eliminar artículos del carrito, actualizar totales y manejar el proceso de pago.
+JavaScript: Funcionalidad, incluyendo agregar/eliminar artículos del carrito, actualizar totales, manejar el proceso de pago. En el sistema de carrito de compras y página de pago del proyecto, se implementaron la biblioteca SweetAlert2 y Fetch para mejorar la experiencia del usuario durante el proceso de confirmación de compra. 
 
 JSON: Utilizado para almacenar y gestionar la lista de productos, permitiendo una fácil integración y actualización de los datos.
